@@ -1,0 +1,91 @@
+  html, body {
+    height: 100%;
+  }
+  #container {
+    height: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+
+  #params {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+  }
+
+  #panzoom {
+      display: inline-block;
+  }
+  #panzoom img {
+      cursor: move;
+  }
+
+  #fl-sim {
+      position: absolute;
+      top: 0%;
+      left: 10%;
+      width: 100%;
+      height: 100%;
+      border: 10px solid #f00;
+  }
+
+  .input {
+      display: flex;
+      justify-content: space-between;
+  }
+  .input-range {
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+  }
+
+.range {
+  --ticksThickness: 2px;
+  --ticksHeight: 30%;
+  --ticksColor: silver;
+
+  display: inline-block;
+  background: silver;
+  background: linear-gradient(to right, var(--ticksColor) var(--ticksThickness), transparent 1px) repeat-x;
+  background-size: calc(100%/((var(--max) - var(--min)) / var(--step)) - .1%) var(--ticksHeight);
+  background-position: 0 bottom;
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+/* min / max labels at the edges */
+.range::before, .range::after {
+  font: 12px monospace;
+  content: counter(x);
+  position: absolute;
+  bottom: -2ch;
+}
+
+.range::before {
+  counter-reset: x var(--min);
+  transform: translateX(-50%);
+}
+
+.range::after {
+  counter-reset: x var(--max);
+  right: 0;
+}
+
+.range > input {
+  width: 100%;
+  margin: 0 -6px; /* Critical adjustment */
+}
+
+.title-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-nav nav {
+  display: flex;
+  align-items: center;
+}

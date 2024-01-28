@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title>Do I Need More Focal Length?</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+  <script
+    src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js"
+    defer
+    ></script>
+  <script src="script/app.js"></script>
+  <script src="script/i18n.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div>
+    <div class="title-nav">
+      <h1 data-i18n="title">Focal Length Simulator</h1>
+      <nav>
+        <label>
+          <span data-i18n="lang">Language</span>:
+        <select>
+          <option value="en">EN</option>
+          <option value="zh_TW">台灣繁體</option>
+        </select>
+      </label>
+      </nav>
+    </div>
+    <p data-i18n="subtitle">Do I need more focal length?</p>
+  </div>
+  <div id="container">
+    <div id="panzoom">
+      <img id="photo" src="assets/150_resize.jpg" />
+    </div>
+    <div id="fl-sim">
+    </div>
+  </div>
+  <div id="params">
+      <div class="input">
+        <input type="file" id="imageUpload" name="image" accept="image/*">
+        <button data-i18n="reset" onclick="app_init()">Test</button>
+      </div>
+      <div class="input">
+        <span data-i18n="lens-focal-length">Lens Focal Length</span>
+        <input name="base_focal_length" type="number" value="75">
+      </div>
+      <div class="input">
+        <span data-i18n="current-focal-length">Current Focal Length</span>
+        <input name="current_focal_length" type="number" value="150"
+               onkeydown=update_current_focal_length()>
+      </div>
+      <div class="input-range">
+        <div class="range" style="--step:1; --min:1; --max:6000">
+          <input name="fl2_range" type="range"
+               min=1 max=6000 step=1 oninput="change_fl_zone_indicator('fl2_range')">
+        </div>
+        <div class="range" style="--step:1; --min:7; --max:40">
+          <input name="fl2_range_wide" type="range"
+               min=7 max=40 step=1 oninput="change_fl_zone_indicator('fl2_range_wide')">
+        </div>
+        <div class="range" style="--step:5; --min:40; --max:150">
+          <input name="fl2_range_std" type="range"
+               min=40 max=150 step=5 oninput="change_fl_zone_indicator('fl2_range_std')">
+        </div>
+        <div class="range" style="--step:10; --min:150; --max:1600">
+          <input name="fl2_range_tele" type="range"
+               min=150 max=1600 step=10 oninput="change_fl_zone_indicator('fl2_range_tele')">
+        </div>
+      </div>
+    </div>
+
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    image_upload_init();
+    i18n_init();
+    app_init();
+}, false);
+</script>
+</html>

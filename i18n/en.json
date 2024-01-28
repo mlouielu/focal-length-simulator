@@ -1,0 +1,8 @@
+{
+  "title": "Focal Length Simulator",
+  "subtitle": "Do I need more focal length?",
+  "lang": "Language",
+  "reset": "Reset Zoom",
+  "lens-focal-length": "Lens Focal Length (mm)",
+  "current-focal-length": "Current Focal Length (mm)"
+}
