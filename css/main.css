@@ -2,7 +2,7 @@
     height: 100%;
   }
   #container {
-    height: 50%;
+    max-height: 40%;
     overflow: hidden;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -80,19 +80,12 @@
   margin: 0 -6px; /* Critical adjustment */
 }
 
-.title-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.title-nav nav {
-  display: flex;
-  align-items: center;
+.title h1 {
+    margin-bottom: 5px;
 }
 
 .header-forkme {
     display:flex;
-    justify-content: flex-end;
     margin-bottom: 10px;
 }
 
