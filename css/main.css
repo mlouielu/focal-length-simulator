@@ -89,3 +89,39 @@
   display: flex;
   align-items: center;
 }
+
+.header-forkme {
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#forkme_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 10px;
+  z-index: 10;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+  background: #0090ff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+    -webkit-transition: -webkit-box-shadow 0.1s ease-in-out;
+       -moz-transition:    -moz-box-shadow 0.1s ease-in-out;
+        -ms-transition:         box-shadow 0.1s ease-in-out;
+            transition:         box-shadow 0.1s ease-in-out;
+}
+#forkme_banner:hover {
+       -moz-box-shadow: inset black 0px 0px 5px;
+    -webkit-box-shadow: inset black 0px 0px 5px;
+            box-shadow: inset black 0px 0px 5px;
+}
+#forkme_banner:active {
+       -moz-box-shadow: inset black 0px 0px 10px;
+    -webkit-box-shadow: inset black 0px 0px 10px;
+            box-shadow: inset black 0px 0px 10px;
+}
