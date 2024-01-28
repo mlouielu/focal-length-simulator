@@ -40,6 +40,7 @@
       margin: 5px;
   }
 
+/* Ref: https://stackoverflow.com/a/64306268 */
 .range {
   --ticksThickness: 2px;
   --ticksHeight: 30%;
