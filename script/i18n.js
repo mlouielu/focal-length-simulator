@@ -16,13 +16,27 @@ translator = new Translator({
   filesLocation: "i18n"
 });
 
-translator.fetch(["en", "zh_TW"]).then(() => {
+translator.fetch(["zh_TW", "en"]).then(() => {
   // Calling `translatePageTo()` without any parameters
   // will translate to the default language.
   translator.translatePageTo();
   registerLanguageToggle();
-});
 
+  // Assume you have a query string like "?lang=val1"
+  const queryString = window.location.search;
+
+  // Create a URLSearchParams instance
+  const urlParams = new URLSearchParams(queryString);
+
+  // Access the parameters
+  const lang = urlParams.get('lang');
+  if (!lang) {
+	lang = "en";
+  }
+
+  translator.translatePageTo(lang);
+  document.querySelector("#lang-select").value = lang;
+});
 }
 
 function registerLanguageToggle() {
