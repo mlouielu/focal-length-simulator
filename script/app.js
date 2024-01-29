@@ -15,6 +15,8 @@ function get_crop_factor() {
 }
 
 function set_current_focal_length(fl) {
+  // Convert to int
+  fl = Math.floor(fl);
   current_focal_length = fl;
   document.querySelector("input[name=current_focal_length").value = fl;
   document.querySelector("input[name=fl2_range]").value = fl;
