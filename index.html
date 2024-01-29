@@ -30,8 +30,7 @@
     <div class="title">
       <h1 data-i18n="title">Focal Length Simulator</h1>
     </div>
-    <p data-i18n="subtitle">Do I need more focal length?</p>
-
+    <p data-i18n="subtitle">Do I need more focal length? Try out with your own photos!</p>
   </div>
   <div id="container">
     <div id="panzoom">
@@ -41,8 +40,11 @@
     </div>
   </div>
   <div id="params">
-      <div class="input">
+    <div class="input">
+      <div>
+        <label for="imageUpload">Use Your Own Photo (Locally)</label>
         <input type="file" id="imageUpload" name="image" accept="image/*">
+      </div>
         <button data-i18n="reset" onclick="app_init()">Test</button>
       </div>
       <div class="input">
