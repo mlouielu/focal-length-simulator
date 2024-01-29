@@ -90,7 +90,7 @@ function app_init() {
   const offset_top = document.getElementById("container").offsetTop;
   const offset_left = document.getElementById("container").offsetLeft;
   flsim.style.height = (elem.clientHeight*scale + 1 - border_width * 2) + "px";
-  flsim.style.width = (elem.clientWidth*scale - offset_left - 1 - border_width) + "px";
+  flsim.style.width = (elem.clientWidth*scale - border_width * 2) + "px";
   flsim.style.top = (to_y + offset_top) + "px";
   flsim.style.left = (to_x + offset_left) + "px";
 }

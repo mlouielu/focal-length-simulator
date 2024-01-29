@@ -1,8 +1,57 @@
-  html, body {
-    height: 100%;
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   }
-  #container {
-    max-height: 40%;
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+ .page-header, .page-footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+ }
+ .page-body {
+     flex-grow: 1;
+     margin: 1rem;
+ }
+
+ .page-footer {
+     background-color: #4b9cd3;
+     color: #F0F0F0;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .footer-content {
+     flex-grow: 1;
+     margin: 1rem;
+
+     width: 40vw;
+ }
+
+ @media (max-width: 1250px) {
+     .footer-content {
+         width: unset;
+     }
+ }
+
+ .page-footer h2 {
+     font-weight: 700;
+ }
+
+ .footer-content h2 > a, h3 > a {
+     text-decoration: none;
+     color: #f0f0f0;
+ }
+
+#container {
+    max-height: 45vh;
     overflow: hidden;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -47,6 +96,7 @@
   input {
       box-sizing: border-box;
   }
+
 
 /* Ref: https://stackoverflow.com/a/64306268 */
 .range {
