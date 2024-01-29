@@ -40,6 +40,14 @@
       margin: 5px;
   }
 
+  .right-col-width {
+      width: 15vw;
+  }
+
+  input {
+      box-sizing: border-box;
+  }
+
 /* Ref: https://stackoverflow.com/a/64306268 */
 .range {
   --ticksThickness: 2px;

@@ -42,21 +42,22 @@
   <div id="params">
     <div class="input">
       <div>
-        <label for="imageUpload">Use Your Own Photo (Locally)</label>
+        <label for="imageUpload">Use Your Photo (Locally)</label>
         <input type="file" id="imageUpload" name="image" accept="image/*">
       </div>
-        <button data-i18n="reset" onclick="app_init()">Test</button>
+      <div>
+        <button class="right-col-width" data-i18n="reset" onclick="app_init()">Reset Zoom</button>
+        </div>
       </div>
       <div class="input">
         <span data-i18n="lens-focal-length">Lens Focal Length</span>
-        <input name="base_focal_length" type="number" step="1" pattern="\d*"
-               value="75" style="max-width: 50px">
+        <input class="right-col-width" name="base_focal_length" type="number" step="1" pattern="\d*"
+               value="75">
       </div>
       <div class="input">
         <span data-i18n="current-focal-length">Current Focal Length</span>
-        <input name="current_focal_length" type="number" step="1" pattern="\d*"
-               value="150" style="max-width: 50px"
-               onkeydown=update_current_focal_length()>
+        <input class="right-col-width" name="current_focal_length" type="number" step="1" pattern="\d*"
+               value="150" onkeydown=update_current_focal_length()>
       </div>
       <div class="input-range">
         <div class="range" style="--step:1; --min:7; --max:40">
