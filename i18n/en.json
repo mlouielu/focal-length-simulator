@@ -4,5 +4,32 @@
   "lang": "Language",
   "reset": "Reset Zoom",
   "lens-focal-length": "Lens Focal Length (mm)",
-  "current-focal-length": "Current Focal Length (mm)"
+  "current-focal-length": "Current Focal Length (mm)",
+  "z": {
+	"1": "Double Tap",
+	"2": "Gesture Zoom",
+	"3": "Wheel Scrolling",
+	"4": "Range Bar",
+	"5": "Manual Enter"
+  },
+  "d-title": {
+	"motivation": "Motivation",
+	"basic": "Basic",
+	"htu": "How To Use",
+	"uyop": "Use Your Own Photo",
+	"htzi": "How To Zoom In"
+  },
+  "d": {
+	"1": "As an amateur photographer, I often find myself capturing bird photos with my standard lens, only to see the bird appearing quite small in the frame. This leads me to a recurring question after each shot:",
+	"2": "What would be the ideal focal length to make these photos look perfect, or at least better?",
+	"3": "While there are numerous focal length simulators available online, none allow the use of personal photographs for simulation.",
+	"4": "So I decided to build one, and this is it! The only tool that allows for the use of your own photos to determine the best focal length for a shot.",
+	"5": "The red bounding box indicates the photo size of the current focal length, and it should be the same at the beginning.",
+	"6": "You can drag, zoom in, and zoom out to interact with and simulate different focal lengths within the photo.",
+	"7": "It is completely offline and local! Nothing will be uploaded to any cloud or server.",
+	"8":"Click \"Choose File\" and select the photo you wish to simulate. The current photo will be replaced with the one you selected.",
+	"9":"This tool attempts to retrieve the lens focal length from your photo's EXIF data. If this fails, you will need to input it manually.",
+	"10":"If you input the lens focal length manually or encounter any issue, click \"Reset Zoom\" to reset the red bounding box.",
+	"11":"There are five ways to zoom in:"
+  }
 }
