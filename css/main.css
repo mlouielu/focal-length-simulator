@@ -107,6 +107,11 @@ html, body {
       margin: 5px;
   }
 
+  blockquote {
+      text-indent: 1.6em;
+      font: italic 1.2rem Areil;
+  }
+
 
 
 /* Ref: https://stackoverflow.com/a/64306268 */
