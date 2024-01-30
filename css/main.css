@@ -31,7 +31,6 @@ html, body {
  .footer-content {
      flex-grow: 1;
      margin: 1rem;
-
      width: 40vw;
  }
 
@@ -79,23 +78,35 @@ html, body {
       border: 10px solid #f00;
   }
 
+  input {
+      box-sizing: border-box;
+  }
+
   .input {
       display: flex;
       justify-content: space-between;
   }
+  .right-col-width {
+      width: 15vw;
+  }
+  @media (max-width: 335px) {
+      #container {
+          height: 30vh;
+      }
+      .sm-col {
+          flex-direction: column;
+      }
+      .sm-col-width {
+          width:100%;
+      }
+  }
+
   .input-range {
       display: flex;
       flex-direction: column;
       margin: 5px;
   }
 
-  .right-col-width {
-      width: 15vw;
-  }
-
-  input {
-      box-sizing: border-box;
-  }
 
 
 /* Ref: https://stackoverflow.com/a/64306268 */
