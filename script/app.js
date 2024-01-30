@@ -53,6 +53,7 @@ function image_upload_init() {
       output.src = URL.createObjectURL(event.target.files[0]);
       output.onload = function() {
         URL.revokeObjectURL(output.src) // free memory
+		app_init();
       }
 	}
   });
