@@ -10,8 +10,8 @@ if you need longer focal length lens for you desire photo composition.
 
 ## Demo
 
-* En: https://mlouielu.github.io/focal-length-simulator/
-* 台灣繁體: https://mlouielu.github.io/focal-length-simulator/?lang=zh_TW
+* En: https://focalsim.louie.lu/focal-length-simulator/
+* 台灣繁體: https://focalsim.louie.lu/focal-length-simulator/?lang=zh_TW
 
 ## How To Use?
 
